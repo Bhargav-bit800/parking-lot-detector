@@ -106,10 +106,8 @@ python3 main.py \
 
 4. **Run the hybrid MOG2+Laplacian Detector** :
    ```bash
- ffmpeg -i videos/your_video.mp4 \
-       -vf "select=eq(n\,3)" \
-       -vframes 1 \
-       images/frame4.png
+python3 detect_precision_hybrid.py
+
    ```
 
 ---
