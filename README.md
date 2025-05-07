@@ -45,3 +45,12 @@ Install Python dependencies via:
 
 ```bash
 pip install opencv-python numpy pyyaml
+
+## Installation
+git clone https://github.com/yourusername/ParkingLot.git
+cd ParkingLot
+# (Optional) Install as a package
+python setup.py install
+
+
+
