@@ -47,5 +47,15 @@ Install Python dependencies via:
 pip install opencv-python numpy pyyaml
 
 
+## Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/yourusername/smart-parking-detector.git
+cd smart-parking-detector
+pip install -r requirements.txt    # or: pip install opencv-python numpy pyyaml
+
+
 
 
