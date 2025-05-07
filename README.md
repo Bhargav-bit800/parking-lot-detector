@@ -87,7 +87,7 @@ smart-parking-detector/
 1. **Create images directory** (one-time setup):
    ```bash
    mkdir -p images
-   ```
+   
 2. **Extract a reference frame for coordinate generation** :
 
  ffmpeg -i videos/your_video.mp4 \
