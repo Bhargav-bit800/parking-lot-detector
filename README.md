@@ -85,6 +85,8 @@ smart-parking-detector/
 ## Quick Start
 
 ### Create Images directory
+### Extract a Reference Frame for coordinate generation
+
 
 
 ---
