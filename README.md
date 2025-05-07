@@ -63,6 +63,22 @@ pip install -r requirements.txt    # or: pip install opencv-python numpy pyyaml
 ---
 
 ## Directory Structure
+smart-parking-detector/
+├── data/
+│   └── coordinates.yml           # Slot definitions (YAML)
+├── videos/
+│   └── *.mp4                     # Example video files
+├── parking_lot/                  # Python package (if installed)
+│   ├── colors.py
+│   ├── drawing_utils.py
+│   ├── coordinates_generator.py
+│   ├── motion_detector.py
+│   └── __init__.py
+├── detect_precision_hybrid.py    # Hybrid MOG2 + Laplacian detector
+├── main.py                       # CLI for coordinate generation & Laplacian detector
+├── setup.py
+└── README.md
+
 
 ---
 
