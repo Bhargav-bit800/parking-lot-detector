@@ -82,6 +82,41 @@ smart-parking-detector/
 └── README.md
 ```
 ---
+## Quick Start
+
+1. **Create images directory** (one-time setup):
+   ```bash
+   mkdir -p images
+   ```
+2. **Extract a reference frame for coordinate generation** :
+   ```bash
+ ffmpeg -i videos/your_video.mp4 \
+       -vf "select=eq(n\,3)" \
+       -vframes 1 \
+       images/frame4.png
+   ```
+3. **Generate slot coordinates** :
+   ```bash
+python3 main.py \
+  --image images/frame4.png \
+  --data  data/coordinates.yml \
+  --video videos/vehicles_carla1.mp4 \
+  --start-frame 1
+   ```
+
+4. **Run the hybrid MOG2+Laplacian Detector** :
+   ```bash
+ ffmpeg -i videos/your_video.mp4 \
+       -vf "select=eq(n\,3)" \
+       -vframes 1 \
+       images/frame4.png
+   ```
+
+---
+   
+
+   
+
 
 
 
