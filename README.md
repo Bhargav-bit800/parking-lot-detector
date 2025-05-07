@@ -45,6 +45,7 @@ Install Python dependencies via:
 
 ```bash
 pip install opencv-python numpy pyyaml
+```
 
 ---
 
