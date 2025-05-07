@@ -12,10 +12,6 @@ It combines adaptive MOG2 background subtraction with per-slot Laplacian checks 
 3. [Installation](#installation)  
 4. [Directory Structure](#directory-structure)  
 5. [Quick Start](#quick-start)  
-   - [0) Prepare Video / Extract Frame with ffmpeg](#0-prepare-video--extract-frame-with-ffmpeg)  
-   - [1) Generate Slot Coordinates](#1-generate-slot-coordinates)  
-   - [2) Run Laplacian-Only Detector](#2-run-laplacian-only-detector)  
-   - [3) Run Hybrid MOG2 Detector](#3-run-hybrid-mog2-detector)  
 6. [Configuration](#configuration)  
 7. [How It Works](#how-it-works)  
 8. [Extending & Packaging](#extending--packaging)  
@@ -111,11 +107,22 @@ python3 main.py \
 python3 detect_precision_hybrid.py
 
 ```
-
-
-
-
 ---
+## Configuration
+Edit the constants at the top of detect_precision_hybrid.py:
+```bash
+VIDEO_PATH      = "videos/your_video.mp4"
+COORDS_YAML     = "data/coordinates.yml"
+MOTION_HISTORY  = 500         # frames MOG2 remembers
+FG_THRESHOLD    = 200         # mask binarization threshold (0–255)
+ENTER_THRESH    = 0.02        # >2% moving pixels → enter candidate
+EXIT_THRESH     = 0.005       # <0.5% moving pixels → exit candidate
+ENTER_FRAMES    = 5           # frames above ENTER_THRESH to confirm occupancy
+EXIT_FRAMES     = 5           # frames below EXIT_THRESH to confirm vacancy
+``` 
+---
+
+
    
 
    
