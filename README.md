@@ -11,12 +11,9 @@ It combines adaptive MOG2 background subtraction with per-slot Laplacian checks 
 2. [Prerequisites](#prerequisites)  
 3. [Installation](#installation)  
 4. [Directory Structure](#directory-structure)  
-5. [Quick Start](#quick-start)  
+5. [Quick Start/How to Run](#quick-start)  
 6. [Configuration](#configuration)  
-7. [How It Works](#how-it-works)  
-8. [Extending & Packaging](#extending--packaging)  
-9. [License](#license)  
-
+7. [How It Works](#how-it-works) 
 ---
 
 ## Features
@@ -120,6 +117,21 @@ EXIT_THRESH     = 0.005       # <0.5% moving pixels → exit candidate
 ENTER_FRAMES    = 5           # frames above ENTER_THRESH to confirm occupancy
 EXIT_FRAMES     = 5           # frames below EXIT_THRESH to confirm vacancy
 ``` 
+---
+
+## How It Works
+### MOG2 Background Subtraction
+Models each pixel as a mixture of Gaussians to produce an adaptive foreground mask, suppressing shadows and lighting changes.
+### Mask Cleanup
+Thresholds the mask at FG_THRESHOLD and applies morphological open/close to remove noise.
+### Per-Slot Analysis
+Computes the fraction of moving pixels inside each slot polygon and uses enter/exit counters with hysteresis for stable state transitions.
+### Visualization
+Overlays red (occupied) or green (vacant) contours and slot IDs, and displays the annotated frame in real time with OpenCV’s imshow().
+
+
+
+
 ---
 
 
