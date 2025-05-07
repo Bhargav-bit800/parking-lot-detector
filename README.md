@@ -58,10 +58,12 @@ Clone the repository and install dependencies:
 git clone https://github.com/Bhargav-bit800/smart-parking-detector.git
 cd smart-parking-detector
 pip install -r requirements.txt    # or: pip install opencv-python numpy pyyaml
+```
 
 ---
 
 ## Directory Structure
+
 ---
 
 
