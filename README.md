@@ -63,6 +63,9 @@ pip install -r requirements.txt    # or: pip install opencv-python numpy pyyaml
 ---
 
 ## Directory Structure
+## Directory Structure
+
+```text
 smart-parking-detector/
 ├── data/
 │   └── coordinates.yml           # Slot definitions (YAML)
@@ -78,6 +81,7 @@ smart-parking-detector/
 ├── main.py                       # CLI for coordinate generation & Laplacian detector
 ├── setup.py
 └── README.md
+
 
 
 ---
