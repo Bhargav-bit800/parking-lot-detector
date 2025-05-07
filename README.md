@@ -1,7 +1,6 @@
 # Parking Lot Space Detector
 
-A lightweight, camera-only smart parking system that runs on a Raspberry Pi using OpenCV.  
-It combines adaptive MOG2 background subtraction with per-slot Laplacian checks and frame-count hysteresis to determine parking-slot occupancy in real time.
+This project delivers a fully self-contained, camera-only smart parking system designed to run on a low-cost Raspberry Pi. By leveraging OpenCV’s MOG2 background-subtraction, we maintain an adaptive model of the lot’s appearance over time—automatically learning gradual lighting shifts and suppressing transient shadows—while a Laplacian-based edge check refines detection within each parking-slot region. A simple hysteresis mechanism (enter/exit counters with frame-count thresholds) ensures that flicker and brief occlusions don’t trigger false state changes.
 
 ---
 
