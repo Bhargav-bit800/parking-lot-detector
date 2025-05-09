@@ -57,7 +57,7 @@ pip install -r requirements.txt    # or: pip install opencv-python numpy pyyaml
 ## Directory Structure
 
 ```text
-smart-parking-detector/
+parking-Iot-detector/
 ├── data/
 │   └── coordinates.yml           # Slot definitions (YAML)
 ├── videos/
@@ -82,6 +82,7 @@ mkdir -p images
 ```
 
 ### Extract a Reference Frame for coordinate generation
+Here, select the 4 corners of an empty parking slot to mark it for slot detection visualization.
 ```bash
 ffmpeg -i videos/your_video.mp4 \
        -vf "select=eq(n\,3)" \
