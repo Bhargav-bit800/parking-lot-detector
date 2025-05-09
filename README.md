@@ -82,7 +82,6 @@ mkdir -p images
 ```
 
 ### Extract a Reference Frame for coordinate generation
-Here, select the 4 corners of an empty parking slot to mark it for slot detection visualization.
 ```bash
 ffmpeg -i videos/your_video.mp4 \
        -vf "select=eq(n\,3)" \
@@ -91,6 +90,7 @@ ffmpeg -i videos/your_video.mp4 \
 
 ```
 ### Generate the Slot Coordinates
+Here, select the 4 corners of an empty parking slot to mark it for slot detection visualization. Press 'q' key to exit after selection is complete (you can select multiple slots).
 ```bash
 python3 main.py \
   --image images/frame4.png \
